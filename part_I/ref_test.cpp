@@ -61,7 +61,14 @@ void parse_weight(const string &filename, DTYPE weight[W][W][C][K]){
   }
 }
 
-// Test the functionality of the golden model
+/*Test the functionality of the golden model
+  KNUM       ofmap channel number (kernel number)
+  CNUM       ifmap channel number
+  W_SIZE     window width and height
+  OROW       output image height
+  OCOL       output image width
+  STRIDE     window stride
+*/
 template <int OROW, int OCOL, int CNUM, int KNUM, int W_SIZE, int STRIDE>
 void test(string in_file, string weight_file, string out_file) 
 {

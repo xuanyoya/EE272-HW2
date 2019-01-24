@@ -19,6 +19,7 @@
 #define W_SIZE     3   //window width and height
 #define OROW       16  //output image height
 #define OCOL       8   //output image width
+#define STRIDE     1   //window stride
 */
 #define INFILE      "input"
 #define WEIGHTFILE  "weight"
