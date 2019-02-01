@@ -1,3 +1,5 @@
+//Stencil struct for Catapult HLS 
+
 #ifndef STENCIL_H
 #define STENCIL_H
 

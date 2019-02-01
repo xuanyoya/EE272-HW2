@@ -25,7 +25,7 @@ void systolic_array(ac_channel<PackedStencil<DTYPE, C_I, 1, 1> > &input,
   // C_I x K_I PE array
   static pe_template<DTYPE, K_II> pe[C_I+1][K_I+1];
 
-  // registers to store partial output 
+  // local buffers to store partial output 
   // There are four of them because K_I = 4 
   PackedStencil<DTYPE, K_II, 1, 1> out_tile_0[XY_I*K_O]; 
   PackedStencil<DTYPE, K_II, 1, 1> out_tile_1[XY_I*K_O]; 

@@ -1,12 +1,5 @@
-//
-// Copyright 2003-2015 Mentor Graphics Corporation
-//
-// All Rights Reserved.
-//
-// THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION WHICH IS THE PROPERTY OF 
-// MENTOR GRAPHICS CORPORATION OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-// 
-
+//Header file layer configurations
+//1/31/2019
 
 #ifndef _GLOBAL_SIMPLE_H
 #define _GLOBAL_SIMPLE_H
