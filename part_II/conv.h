@@ -16,8 +16,8 @@
 #define KII         2  //the innermost loop size of kernel dimension, also the loop iteration inside the PE array 
 
 // YOU CAN CHANGE BELOW
-#define K_NUM       64  //kernel number
-#define C_NUM       64  //channel number
+#define K_NUM       64  //kernel number, KI_NUM must be a factor of K_NUM
+#define C_NUM       64  //channel number, CI_NUM must be a factor of C_NUM
 
 
 #define KO_NUM      K_NUM / KI_NUM / KII   //the outer loop size of kernel dimension, kernel number = KO_NUM * KI_NUM
@@ -26,8 +26,8 @@
 #define W_SIZE      3   //window width or height (assume they are the same)
 #define OROW        28  //output image row
 #define OCOL        28  //output image col
-#define OROW_I      14  //tiled output image row, the inner loop size of row dimension  
-#define OCOL_I      14  //tiled output image col, the inner loop size of col dimension
+#define OROW_I      14  //tiled output image row, the inner loop size of row dimension, must be a factor of OROW  
+#define OCOL_I      14  //tiled output image col, the inner loop size of col dimension, must be a factpr pf OCOL
 
 #define OROW_O      OROW / OROW_I  //the outer loop size of row dimension
 #define OCOL_O      OCOL / OCOL_I  //the outer loop size of col dimension
