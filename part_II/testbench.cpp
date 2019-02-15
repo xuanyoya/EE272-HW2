@@ -5,8 +5,7 @@
 #include "conv_ref.h"
 
 #include <mc_scverify.h>
-//#include "conv.h"
-#include "hls_top.h"
+#include "conv.h"
 
 #define DEBUG
 

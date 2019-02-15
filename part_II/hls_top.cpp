@@ -11,7 +11,7 @@
 #include <boost/preprocessor/punctuation/comma_if.hpp>
 #include <boost/preprocessor/cat.hpp>
 
-#define ARRAY_DIMENSION 8
+#define ARRAY_DIMENSION 16
 #define REPEAT(x) BOOST_PP_REPEAT(ARRAY_DIMENSION, x, 0)
 
 /*
@@ -19,7 +19,7 @@ The systolic array is 4 X 4. unrolling C_I (=4) channels amd K_I (=4) kernels.
 The input and output of systolic array are streams of input, weight and output.
 */
 #pragma hls_design 
-#pragma hls_pipeline_init_interval 1
+#pragma hls_pipeline_init_interval 2
 template<typename DTYPE, int K_II, int K_I, int Y_I, int X_I, int Y_O, int X_O, int C_I, int K_O, int C_O, int WS>
 void systolic_array(ac_channel<PackedStencil<DTYPE, C_I, 1, 1> > &input, 
                     ac_channel<PackedStencil<DTYPE, K_II, K_I, 1> > &weight, 

@@ -11,8 +11,8 @@
 
 
 // DO NOT CHANGE
-#define KI_NUM      8  //tiled kernel number, the inner loop size of kernel dimension, also one of the PE array demension
-#define CI_NUM      8  //tiled channel number, the inner loop size of channel dimension, also one of the PE array demension
+#define KI_NUM      16  //tiled kernel number, the inner loop size of kernel dimension, also one of the PE array demension
+#define CI_NUM      16  //tiled channel number, the inner loop size of channel dimension, also one of the PE array demension
 #define KII         2  //the innermost loop size of kernel dimension, also the loop iteration inside the PE array 
 
 // YOU CAN CHANGE BELOW
@@ -35,5 +35,9 @@
 #define STRIDE      1
 typedef ac_int<16> DTYPE;  //define precision
 
+
+void conv(ac_channel<PackedStencil<DTYPE,CI_NUM> > &input,
+          ac_channel<PackedStencil<DTYPE, KII, KI_NUM> > &weight,
+          ac_channel<PackedStencil<DTYPE, KII, KI_NUM> > &output);
 
 #endif

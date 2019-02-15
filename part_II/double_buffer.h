@@ -6,7 +6,7 @@
 #include <boost/preprocessor/punctuation/comma_if.hpp>
 #include <boost/preprocessor/cat.hpp>
 
-#define ARRAY_DIMENSION 8
+#define ARRAY_DIMENSION 16
 #define REPEAT(x) BOOST_PP_REPEAT(ARRAY_DIMENSION, x, 0)
 
 template<typename T, int N>
