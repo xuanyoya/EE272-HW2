@@ -11,8 +11,8 @@
 
 
 // DO NOT CHANGE
-#define KI_NUM      4  //tiled kernel number, the inner loop size of kernel dimension, also one of the PE array demension 
-#define CI_NUM      4  //tiled channel number, the inner loop size of channel dimension, also one of the PE array demension
+#define KI_NUM      8  //tiled kernel number, the inner loop size of kernel dimension, also one of the PE array demension
+#define CI_NUM      8  //tiled channel number, the inner loop size of channel dimension, also one of the PE array demension
 #define KII         2  //the innermost loop size of kernel dimension, also the loop iteration inside the PE array 
 
 // YOU CAN CHANGE BELOW
