@@ -11,7 +11,7 @@
 #include <boost/preprocessor/punctuation/comma_if.hpp>
 #include <boost/preprocessor/cat.hpp>
 
-#define ARRAY_DIMENSION 4
+#define ARRAY_DIMENSION 16
 #define REPEAT(x) BOOST_PP_REPEAT(ARRAY_DIMENSION, x, 0)
 
 /*
