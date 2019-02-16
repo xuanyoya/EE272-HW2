@@ -11,7 +11,7 @@
 #include <boost/preprocessor/punctuation/comma_if.hpp>
 #include <boost/preprocessor/cat.hpp>
 
-#define ARRAY_DIMENSION 16
+#define ARRAY_DIMENSION 4
 #define REPEAT(x) BOOST_PP_REPEAT(ARRAY_DIMENSION, x, 0)
 
 /*
@@ -55,7 +55,7 @@ void systolic_array(ac_channel<PackedStencil<DTYPE, C_I, 1, 1> > &input,
   ko: for (int k_idx = 0; k_idx < K_O; ++k_idx) {
   // loop inside each image tile
   xy_i: for (int step = 0; step < K_I+C_I+XY_I-1; ++step) {
-        PackedStencil<DTYPE,K_II, K_I> w_tile[C_I];
+        static PackedStencil<DTYPE,K_II, K_I> w_tile[C_I];
   
         // filling phase for systolic array, put data into local registers 
         if (step < C_I) {            
